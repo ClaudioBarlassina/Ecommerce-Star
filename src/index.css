@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* tipografias */
+  --tipog1: 'Playfair Display';
+  --tipog2: 'Noto Serif';
+  --tipog3: 'Plus Jakarta Sans';
+  --tipog4: 'Inter';
+
+ /* colores */
+ --color1: #1E1E1E;
+ --color2:#ffffff;
+ --colorparrafos: #000000;
+ --colorparrafo2: #434141;
+ --colorfondofinal:#EAECF0;
+ 
+}
+.aviso-desktop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.993);
+  color: white;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 9999;
+}
+@media (min-width:426px) {
+ .contenedor-general{
+    display: none
+  }
+  .aviso-desktop {
+    display: flex;
+  }
+}
+
+
+
+@media(max-width:425px){
+   .contenedor-general{
+    display: flex;
+   }
+   .aviso-desktop{
+    display: none;
+   }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    min-width: 425px
+   
+    /* background-color: #000000; */
+  }
+}
+
+.contenedor-general{
+  /* border: 1px solid black; */
+  width: 100%;  /*ancho*/
+  min-height: 100vh; /*altura minima toda la pantalla*/
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: flex-start;/*que empieze de arriba*/
+ box-sizing: border-box;  /*hace respetar el tamaño*/
+
+}
