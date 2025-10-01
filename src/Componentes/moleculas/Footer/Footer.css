@@ -10,6 +10,8 @@
 }
 .footer-contenedorSecundario{
     background-color: var(--colorfondofinal);
+    padding: 20px;
+
 }
 .footer-contenedorSecundario h3{
     margin: 0 15px 50px 15px;
@@ -23,27 +25,30 @@
     color: var(--colorparrafo2);
     font-family: var(--tipog4);
 }
-.footer-contenedorSecundario h4{
+.footer-contenedorSecundario>h4{
     font-family: var(--tipog4);
     color: var(--colorparrafo2);
     margin-top: 0;
+    font-size: 14px;
 }
 .footer-org-whats{
     display: flex;
     justify-content: center;
 }
 .footer-nombre{
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0;
+    font-family: var(--tipog1);
+    font-weight: 700;
 }
 .footer-org-whats-img{
     width: 15px;
     height: 15px;
     color:var(--colorparrafo2)
 }
-.footer-final{
+.footer-final >h2{
     font-family: var(--tipog4);
-    font-size: 8px;
+    font-size: 12px;
     margin: 20px;
     color: gray;
 }

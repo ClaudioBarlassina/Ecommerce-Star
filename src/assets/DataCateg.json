@@ -1,0 +1,25 @@
+[
+    {
+      "title": "ACERO QUIRÚRGICO",
+      "items": ["Anillos", "Colgantes", "Aros","Pulseras","Piercing", "Accesorios"]
+    },
+    {
+     "title": "ACERO BLANCO",
+      "items": ["Anillos", "Colgantes", "Aros","Pulseras"]
+    },{
+      "title": "ACERO DORADO",
+     "items": ["Anillos", "Colgantes", "Aros","Pulseras"]
+    },{
+        "title": "PIEDRAS NATURALES",
+       "items": ["Dijes", "Kits"]
+      },{
+        "title": "FANTASIA",
+       "items": ["Anillos", "Aros", "Accesorios Cabello", "Pulseras"]
+      },{
+        "title": "COSMETICOS",
+       "items": ["Todos"]
+      },{
+        "title": "RELOJES",
+       "items": ["Todos"]
+      }
+  ]

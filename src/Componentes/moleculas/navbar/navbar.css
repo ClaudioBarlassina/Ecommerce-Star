@@ -1,3 +1,5 @@
+ 
+
 .contenedor{
     display: grid;
     /* border: 1px solid black; */
@@ -10,6 +12,9 @@
    align-items: center;
    padding: 15px;
    height: 110px;
+}
+.contenedor.blur{
+  opacity: 0.5;
 }
 
 .iconos-princ{
@@ -26,12 +31,142 @@
    align-items: center;
    font-size: 40px;
   margin: 0;
+  font-weight: 700;
 
   
+}
+.iconos-sec{
+
+  justify-self: end;
 }
 
 .icono-usuario{
 justify-self: end;
 
-margin: 5px;
+margin: 13px;
+}
+.icono-cart{
+  width: 20px;
+  height: 20px;
+  margin: 13px;
+  color:gray
+
+}
+
+
+/* menu Categorias  */
+.categorias-contenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100vh;
+  background-color: var(--color2);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+.categorias-contenedor.open {
+  transform: translateX(0);
+  
+}
+
+.categorias-contenedor.closed {
+  transform: translateX(-100%);
+}
+.categoria-Exit {
+  background-color: var(--colorcategorias);
+  width: 100%;
+  height: 110px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.categoria-Exit p {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-family: var(--tipog3);
+  color: var(--colortipogr);
+}
+.categoria-Exit img {
+  margin: 10px;
+}
+.categoria-contenido-categorias {
+    margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+height: 70%;
+  
+  padding: 0;
+}
+/* .categorias-items {
+ 
+  width: 80%;
+  /* min-height:70px; */
+  /* height: auto;
+  margin: 10px;
+border-bottom: 1px solid black; */
+ 
+/* }  */
+.accordion-item{
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid black;
+  margin: 7px;
+  
+}
+/* .categorias-items h3{
+    text-align: initial;
+    margin: 0;
+    display: flex;
+   justify-content: space-between
+
+    
+} */
+/* .categorias-items ul {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.categorias-items.open ul {
+  max-height: 500px; /* suficiente para mostrar el contenido */
+  /* opacity: 1; */
+/* }  */
+.lista-acordeon-ul{
+padding: 0;
+}
+.lista-acordeon-li{
+  list-style: none;
+  font-family: var(--tipog3);
+ 
+}
+.lista-acordeon-li button{
+  width: 100%;
+ border:1px solid grey;
+ height: 40px;
+ margin: 3px;
+ 
+}
+.accordion-button{
+  background-color:var(--color2);
+  padding: 0px 5px 40px 5px;
+  height: 70px;
+  font-family: var(--tipog3);
+  color: var(--colorListaCateg);
+  font-size: 14px;
+ 
+
+}
+.accordion-button:not(.collapsed){
+  background: var(--color2);
+}
+.accordion-button::after{
+  background-image: url("../../Atomos/img/plus.svg");
+  color: var(--colorListaCateg);
+
 }
