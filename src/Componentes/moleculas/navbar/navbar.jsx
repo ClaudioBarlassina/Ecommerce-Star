@@ -176,7 +176,7 @@ const Navbar = () => {
                   </td>
                 </tr>
               ))}
-
+              
               {carrito.length === 0 && (
                 <tr>
                   <td colSpan={3} style={{ textAlign: 'center', fontFamily:"sans-serif" }}>
@@ -186,7 +186,21 @@ const Navbar = () => {
               )}
             </tbody>
           </Table>
-        </div>
+        </div><div className="carrito-total-subtotal-finalizar">
+               <div className='carrito-subtotal'>
+                <p>Subtotal</p>
+                <p>$$12345</p>
+               </div>
+               <div className='carrito-total'>
+                <p>Total</p>
+                <p>$$123456</p>
+               </div>
+               <div className='carrito-buttons'>
+                <button className='finalizar'>FINALIZAR COMPRA</button>
+                <button className='seguirCom'>SEGUIR COMPRANDO</button>
+               </div>
+              </div>
+
       </div>
     </div>
   )
