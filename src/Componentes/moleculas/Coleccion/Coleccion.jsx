@@ -1,5 +1,6 @@
 import React from 'react'
 import "../Coleccion/Coleccion.css"
+import { Link } from 'react-router-dom'
 import imagenColeccion from "../../Atomos/img/rectangle-29.svg"
 const Coleccion = () => {
   return (
@@ -11,7 +12,9 @@ const Coleccion = () => {
        <p>Diseños unicos y vanguardistas te esperan
         para complementar cada uno de tus looks
        </p>
-       <button className='coleccion-button'>Descubre la colección</button>
+       <Link to="/Productos">
+       <button className='coleccion-button' >Descubre la colección</button>
+       </Link>n
       </div>
     </div>
   )

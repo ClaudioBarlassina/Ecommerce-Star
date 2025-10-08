@@ -1,0 +1,20 @@
+.card-contenedorgeneral{
+   z-index: 1;
+   position: relative;
+}
+.card-conjunto-texto{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    overflow: hidden;
+}
+.card-nombre{
+    margin: 10px 0  10px 5px;
+    overflow: hidden;
+    font-size: 12px;
+
+}
+.card-precio{
+     margin: 0px 0  10px 5px;
+      font-size: 13px;
+}

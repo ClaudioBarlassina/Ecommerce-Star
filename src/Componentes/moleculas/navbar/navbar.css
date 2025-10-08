@@ -12,6 +12,8 @@
    align-items: center;
    padding: 15px;
    height: 110px;
+   box-shadow: 0 0 10px;
+   z-index: 3;
 }
 .contenedor.blur{
   opacity: 0.5;
