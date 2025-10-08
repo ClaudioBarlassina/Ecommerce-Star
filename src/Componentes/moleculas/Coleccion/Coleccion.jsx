@@ -12,7 +12,7 @@ const Coleccion = () => {
        <p>Diseños unicos y vanguardistas te esperan
         para complementar cada uno de tus looks
        </p>
-       <a href="./Productos" className='coleccion-button'>Descubre la colección</a>
+       <a href="/Productos" className='coleccion-button'>Descubre la colección</a>
        {/* <Link to="/Productos">
        <button className='coleccion-button' >Descubre la colección</button>
        </Link>n */}
