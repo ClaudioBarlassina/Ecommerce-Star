@@ -133,7 +133,7 @@
 /* Carrito */
 .carrito-contenedorGeneral {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 90%;
   /* border: 1px solid black; */
   right: 0;

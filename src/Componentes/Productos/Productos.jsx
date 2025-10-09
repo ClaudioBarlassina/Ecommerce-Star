@@ -16,11 +16,14 @@ const Productos = () => {
       </div>
       <div className="productos-articulos">
         <div className="productos-articulos-items">
-         
+          {console.log(Data)}
           {Data.map((item, index) => (
-           
-            <Card key={item.id}img={item.image} nombre={item}></Card>
-          
+            <Card
+              key={item.id}
+              imagenes={item.image}
+              nombre={item.nombre}
+              precio={item.precio}
+            ></Card>
           ))}
         </div>
       </div>
