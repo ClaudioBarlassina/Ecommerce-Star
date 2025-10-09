@@ -28,7 +28,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/productos" element={<Productos></Productos>} />
+            <Route path="/Productos" element={<Productos></Productos>} />
             <Route path="/contacto" element={''} />
           </Routes>
           <Suscripcion />
