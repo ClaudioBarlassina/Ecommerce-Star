@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Productos.css'
 import Card from '../moleculas/Card/Card'
 // Datos Prueva
-import Data from '../../assets/Data.json'
+// import Data from '../../assets/Data.json'
+import useStore from '../../Zustand/useStore'
 
 const Productos = () => {
+
+
+const Data = useStore((state) => state.Productos)
+const ProductosBD = useStore((state) => state.fetchProductos)
+
+useEffect(()=>{
+  ProductosBD()
+},[ProductosBD])
+
+
+
+
   return (
     <div className="productos-contenedorgeneral">
       <div className="productos-titulo">
@@ -16,18 +29,18 @@ const Productos = () => {
       </div>
       <div className="productos-articulos">
         <div className="productos-articulos-items">
-          {console.log(Data)}
+          
           {Data.map((item, index) => (
             <Card
               key={item.id}
-              imagenes={item.image}
+              imagenes={item.imagenes_productos}
               nombre={item.nombre}
               precio={item.precio}
             ></Card>
           ))}
         </div>
       </div>
-      <div>publicidad</div>
+      {/* <div>publicidad</div> */}
     </div>
   )
 }
