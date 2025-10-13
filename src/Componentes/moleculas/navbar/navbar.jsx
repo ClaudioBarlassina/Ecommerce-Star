@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import imagenejemplo from '../../Atomos/img/imagen-ejemplo.jpg'
 import Accordion from 'react-bootstrap/Accordion'
-import { ListGroup, Button, Table } from 'react-bootstrap'
+import {  Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './navbar.css'
 // Grafica
 
@@ -31,7 +32,9 @@ const Navbar = () => {
   const OpenMenuCarrito = useStore((state) => state.OpenMenuCart)
   const CloseMenuCarrito = useStore((state) => state.ClosemenuCarrito)
 
-  // lista productos
+  // Filtros
+
+  const setFiltro = useStore(state => state.setFiltro)
 
   const [carrito, setCarrito] = useState([
     {
@@ -49,6 +52,8 @@ const Navbar = () => {
       imagen: imagenejemplo,
     },
   ])
+
+  // handler local de aumento o diminucion de cantidad
 
   const aumentar = (id) => {
     setCarrito((prev) =>
@@ -71,8 +76,16 @@ const Navbar = () => {
   const eliminar = (id) => {
     setCarrito((prev) => prev.filter((item) => item.id !== id))
   }
+  //handler Toma de Categorias y subcategorias
+  
+  const handlerSelect = (categoria, subcategoria)=>{
+    setFiltro(categoria, subcategoria)
+    CloseMenu()
+    console.log("Categoria" , categoria, "Subacategoria", subcategoria)
+  }
 
-  //  Estados SubMenu
+
+  
 
   return (
     <div className="contenedor">
@@ -96,7 +109,9 @@ const Navbar = () => {
                   <ul className="lista-acordeon-ul">
                     {cat.items.map((sub, i) => (
                       <li key={i} className="lista-acordeon-li">
-                        <button>{sub}</button>
+                        <Link to={"/Productos"}>
+                        <button onClick={()=>handlerSelect(cat.title, sub)}>{sub}</button>
+                        </Link>
                       </li>
                     ))}
                   </ul>
