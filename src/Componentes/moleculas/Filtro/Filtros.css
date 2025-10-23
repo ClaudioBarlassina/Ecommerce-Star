@@ -1,0 +1,46 @@
+.filtros-contenedorGeneral{
+    height: 100vh;
+   
+}
+
+.filtros-tituloprinc{
+    height: 150px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid rgb(15, 15, 15);
+    
+}
+.filtros-tituloprinc h3{
+    margin: 20px;
+}
+/* .accordion ul{
+   padding: 0;
+} */
+/* .accordion li {
+    list-style: none;
+     */
+
+/* }
+.accordion label{
+    margin: 5px;
+} */
+/* .accordion input{
+    margin: 10px;
+} */
+.filtro-piePagina{
+    
+    bottom: 30px;
+    position: fixed;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    align-content: center;
+    justify-content: center
+}
+.filtro-piePagina button{
+width: 100%;
+height: 45px;
+margin: 30px;
+}

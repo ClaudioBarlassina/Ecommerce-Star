@@ -37,12 +37,23 @@
   
 }
 
-
-/*  */
-
-/* .contenedor{
-  margin-top: 150px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-} */
+/* FILTRO  */
+.filtro-contenedorEnProd{
+ background-color: rgb(252, 249, 249);
+ position: fixed;
+ width: 100%;
+ z-index: 3;
+ height: 100vh;
+ display: none;
+ align-content: center;
+ justify-content: center;
+ top: 0;
+}
+.accordion-item{
+  width: 350px;
+}
+ .openfiltro{
+max-height: 100%;  
+  opacity: 1;
+  display:flex;
+} 

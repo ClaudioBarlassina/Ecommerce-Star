@@ -83,3 +83,22 @@ console.log()
 
   return productos;
 }
+
+export async function getCategorias () {
+
+const {data: categoriaEstado} = await supabase
+
+.from("categorias")
+.select("nombre")
+
+return categoriaEstado;
+
+}
+
+export async function getSubcategorias(){
+  const {data:subcategoriaEstado}= await supabase
+  .from("subcategorias").select("nombre")
+ 
+  return subcategoriaEstado;
+
+}

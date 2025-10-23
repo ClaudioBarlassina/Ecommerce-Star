@@ -1,6 +1,11 @@
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
-import { getProductos, getProductosPorCategoria } from '../services/supabaseService'
+import {
+  getProductos,
+  getProductosPorCategoria,
+  getCategorias,
+  getSubcategorias,
+} from '../services/supabaseService'
 
 const useStore = create(
   devtools((set) => ({
@@ -10,10 +15,15 @@ const useStore = create(
     // Contenidos
     Productos: [],
     Carrito: [],
+    ContenidoCategoria: [],
+    ContenidoSubcategoria: [],
 
     // Categorias y subcategorias
     Categoria: '',
     SubCategoria: '',
+
+    // Filtro
+    EstadoFiltro: false,
 
     // menu
     botonMenu: () => set((state) => ({ Menu: !state.Menu })),
@@ -31,22 +41,31 @@ const useStore = create(
       set({ Productos: data })
     },
     setProductos: (productos) => set({ Productos: productos }),
- 
-    // Categorias y subcategorias 
 
-    setFiltro: async(Categoria, SubCategoria)=>{
-        set({Categoria, SubCategoria})
-        const data = await  getProductosPorCategoria(Categoria,SubCategoria)
-        console.log(data)    
-        set({Productos:data})
+    // Categorias y subcategorias
+
+    setFiltro: async (Categoria, SubCategoria) => {
+      set({ Categoria, SubCategoria })
+      const data = await getProductosPorCategoria(Categoria, SubCategoria)
+      console.log(data)
+      set({ Productos: data })
     },
-    
-   
-        
-        
-    
 
+    fetchCategoria: async () => {
+      const data = await getCategorias()
+      console.log(data)
+      set({ ContenidoCategoria: data })
+    },
 
+    fetchSubCategoria: async () => {
+      const data = await getSubcategorias()
+      set({ ContenidoSubcategoria: data })
+    },
+    //  Filtros
+
+    MenuFiltro: () => set((state) => ({ EstadoFiltro: !state.EstadoFiltro })),
+    openFiltro: () => set({ EstadoFiltro: true }),
+    closeFiltro: () => set({ EstadoFiltro: false }),
   }))
 )
 export default useStore
